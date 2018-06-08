@@ -25,10 +25,10 @@ class NoteNameVC: UIViewController {
         if (textField.text?.trimmingCharacters(in: .whitespaces).isEmpty)! {
             textField.placeholder = "Textfield is empty"
         } else {
-            let note = Note(context: context)
-            note.name = textField.text
-            note.registredDate = Date()
-            notesArray.append(note)
+//            let note = Note(context: context)
+//            note.name = textField.text
+//            note.registredDate = Date()
+//            notesArray.append(note)
             saveToCoreData()
             textField.resignFirstResponder()
         }
@@ -59,19 +59,14 @@ class NoteNameVC: UIViewController {
     }
     
     private func loadFromCoreData() {
-        let request: NSFetchRequest<Note> = Note.fetchRequest()
-        do {
-            try notesArray = context.fetch(request)
-        } catch {
-            print("Error: \(error)")
-        }
+        
     }
     
     
     @IBAction func deleteBtnAction(_ sender: UIButton) {
         let buttonPressedPosition = sender.convert(CGPoint.zero, to: self.tableView)
         let indexPath = self.tableView.indexPathForRow(at: buttonPressedPosition)
-        context.delete(notesArray[indexPath!.row])
+//        context.delete(notesArray[indexPath!.row])
         notesArray.remove(at: indexPath!.row)
         saveToCoreData()
     }
@@ -84,7 +79,7 @@ extension NoteNameVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = notesArray[indexPath.row].name ?? "Invalid name"
+//        cell.textLabel?.text = notesArray[indexPath.row].name ?? "Invalid name"
         return cell
     }
     
@@ -96,7 +91,7 @@ extension NoteNameVC: UITableViewDataSource, UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! NotesTableVC
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedNote = notesArray[indexPath.row]
+            
         }
     }
     
