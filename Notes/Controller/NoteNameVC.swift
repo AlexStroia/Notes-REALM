@@ -106,7 +106,7 @@ extension NoteNameVC: UITableViewDataSource, UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! NotesTableVC
         if let indexPath = tableView.indexPathForSelectedRow {
-            
+            destinationVC.currentNote = notesArray[indexPath.row]
         }
     }
     

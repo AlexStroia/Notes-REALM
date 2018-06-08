@@ -87,7 +87,6 @@
 				C13EEAE820C688AA009A1F90 /* Utils */,
 				C13EEAE720C6889C009A1F90 /* SupportingFiles */,
 				C13EEAE520C68875009A1F90 /* Controller */,
-				C13EEAE620C6887D009A1F90 /* View */,
 				C13EEAE420C68870009A1F90 /* Model */,
 				C13EEADE20C68858009A1F90 /* Info.plist */,
 			);
@@ -108,6 +107,7 @@
 			children = (
 				C13EEAD120C68857009A1F90 /* NoteNameVC.swift */,
 				C13EEAE920C6CF3A009A1F90 /* NotesTableVC.swift */,
+				C13EEAE620C6887D009A1F90 /* View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
