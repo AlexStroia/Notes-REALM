@@ -1,7 +1,7 @@
 # Notes-CoreData
 
 ## General Project Description
-Project developed using xCode 9.3, Swift4 & CoreData for making use of CRUD Functionalities.
+Project developed using xCode 9.3, Swift4 & REALM SWIFT for making use of CRUD functionalities.
 
 
 ## How to install
